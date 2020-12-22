@@ -2,6 +2,11 @@
 
 Terraform code for setting up an AWS lab environment for working OPA, bundle servers, etc.
 
+## TODO
+
+* Provision custom AMI with OPA installed and running with provided config (fetching bundle from S3)
+* Terratest
+
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
 
