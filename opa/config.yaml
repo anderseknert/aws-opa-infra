@@ -1,0 +1,21 @@
+services:
+  aws:
+    url: https://opa-lab-bucket.s3.eu-north-1.amazonaws.com
+    response_header_timeout_seconds: 5
+    credentials:
+      s3_signing:
+        metadata_credentials:
+          aws_region: eu-north-1
+          iam_role: opa_lab_role
+
+bundles:
+  authz:
+    service: aws
+    resource: bundles/policy.tar.gz
+  signing:
+    keyid: secret
+
+keys:
+  secret:
+    key: abc123
+    algorithm: HS256
